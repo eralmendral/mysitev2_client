@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target" : "ES6",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports" : true,
+    "paths": {
+      "@Components/*": ["./src/Components/*"],
+      "@Containers/*": ["./src/Containers/*"],
+      "@Utilities/*": ["./src/Utilities/*"],
+      "@Assets/*": ["./src/Assets/*"],
+      "@Redux/*": ["./src/Redux/*"]
+    }
+  },
+  "exclude": ["node_modules", "build"]
+}
