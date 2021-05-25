@@ -14,7 +14,11 @@ export default class Home extends Component {
       <div className="fl w-100" >
         {/* <Landing /> */}
         {/* <ProjectList /> */}
-        <Experience />
+        {/* <Experience /> */}
+
+        {/* Skills */}
+        {/* Contact */}
+        <Contact />
       </div>
     )
   }
