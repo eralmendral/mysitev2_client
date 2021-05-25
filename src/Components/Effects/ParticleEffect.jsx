@@ -7,17 +7,20 @@ const ParticleEffect = () => (
     params={{
 	    "particles": {
 	        "number": {
-	            "value": 160,
+	            "value": 220,
 	            "density": {
 	                "enable": false
 	            }
 	        },
+					"color": {
+						"value": "#d11b43"
+					},
 	        "size": {
 	            "value": 2,
 	            "random": true,
 	            "anim": {
 	                "speed": 4,
-	                "size_min": 0.1
+	                "size_min": 2
 	            }
 	        },
 	        "line_linked": {

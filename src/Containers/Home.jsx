@@ -12,12 +12,11 @@ export default class Home extends Component {
   render() {
     return (
       <div className="fl w-100" >
-        {/* <Landing /> */}
-        {/* <ProjectList /> */}
-        {/* <Experience /> */}
+        <Landing />
+        <ProjectList />
+        <Experience />
 
         {/* Skills */}
-        {/* Contact */}
         <Contact />
       </div>
     )

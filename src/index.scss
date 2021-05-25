@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -49,7 +49,6 @@ a {
 }
 
 .contact {
-  
   display: flex;
   flex-direction: column;
   background: #000;
@@ -67,11 +66,9 @@ a {
   }
 }
 
-
 .p10px {
-  padding: 10px
+  padding: 10px;
 }
-
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
