@@ -15,14 +15,14 @@ const theme = createMuiTheme({
   overrides: MaterialThemeOverrides,
   palette: {
     primary: {
-      light: '#757ce8',
-      main: '#735a3c',
+      main: '#b50e3b',
+      light: '#735a3c',
       dark: '#002884',
       contrastText: '#fff',
     },
     secondary: {
       light: '#ff7961',
-      main: '#b07309',
+      main: '#735a3c',
       dark: '#ba000d',
       contrastText: '#000',
     },

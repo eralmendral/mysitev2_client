@@ -6,7 +6,7 @@ export default class TypingEffect extends Component {
       <div>
         <ReactTypingEffect
           className="introduction"
-          text={["Hi, I'm Eric Almendral", "Software Architect", "I Design and Build Software Applications", "Cybersecurity and Cloud Computing Practitioner"]}
+          text={["Hi, I'm Eric Almendral", "Software Developer"]}
           speed='100'
           eraseSpeed='25'
           eraseDelay='250'

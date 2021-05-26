@@ -16,6 +16,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+.landingText {
+  user-select: none; 
+}
+
+.dashboardLink {
+  z-index: 9999;
+  position: fixed;
+  right: 10px;
+  top: 15px;
+  cursor: pointer;
+  color: black;
+
+  &:hover {
+    background: #000;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+}
+
 .project-container {
   display: flex;
   flex-basis: auto; /* default value */
