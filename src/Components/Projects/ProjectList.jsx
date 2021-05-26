@@ -30,7 +30,7 @@ const ProjectsComponent = ({ projects, projectIsFetching, history }) => {
 
 
     return (
-        <div className="project">
+        <div className="project" id="projects">
             <h3 className="text-center mt-5 sectionTitle">Personal Projects</h3>
             {projectIsFetching ? <h1>Loading...</h1> : projectsDiv}
         </div>

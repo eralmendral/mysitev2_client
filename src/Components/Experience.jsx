@@ -3,7 +3,7 @@ import Timeline from './Effects/Timeline';
 
 function Experience() {
   return (
-    <div class="bg-grey">
+    <div className="bg-grey" id="experience">
       <h3>Experience</h3>
       <Timeline />
     </div>
