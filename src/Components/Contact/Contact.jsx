@@ -82,7 +82,7 @@ class ContactComponent extends React.Component {
   render() {
     return (
       <div id="contact">
-        <SectionContainer title="Contact" theme="light">
+        <SectionContainer title="Contact" theme="dark">
           <div className="contact">
             <div className="contact-info">
               <ul>

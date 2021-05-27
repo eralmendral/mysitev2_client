@@ -17,11 +17,6 @@ const ProjectsComponent = ({ projects, projectIsFetching, history }) => {
 
     const [filter, setFilter] = useState("");
 
-    useEffect(() => {
-        console.log(projects);
-    }, [])
-
-
     const projectsDiv = projects ?
         <div className="project-container">
             {Object.keys(projects).filter((key, i) => {
@@ -36,7 +31,7 @@ const ProjectsComponent = ({ projects, projectIsFetching, history }) => {
         <div id="projects">
             <SectionContainer title="Projects" theme="light">
                 <div className="filterProjects">
-                    <input placeholder="search for tags ex.('react')" className="filterProjectInput" type="text" onChange={(e) => setFilter(e.target.value)} />
+                    <input placeholder="search for tags ex. 'react'" className="filterProjectInput" type="text" onChange={(e) => setFilter(e.target.value)} />
                 </div>
                 <div className="project">
                     {projectIsFetching ? <h1>Loading...</h1> : projectsDiv}

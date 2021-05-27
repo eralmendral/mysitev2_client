@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 
 import { fetchProjectsStart } from '@Redux/projects/actions';
+import { fetchExperienceStart } from '@Redux/experience/actions';
+
 import Home from './Containers/Home';
 import Project from '@Components/Projects/Project';
 import './App.css';
@@ -35,6 +37,7 @@ const theme = createMuiTheme({
 function App(props) {
   useEffect(() => {
     props.fetchProjects();
+    props.fetchExperience();
   }, [props])
 
   return (
@@ -55,6 +58,7 @@ function App(props) {
 
 const mapDispatchToProps = (dispatch) => ({
   fetchProjects: () => (dispatch(fetchProjectsStart())),
+  fetchExperience: () => (dispatch(fetchExperienceStart())),
 })
 
 export default connect(null, mapDispatchToProps)(App);
