@@ -15,12 +15,12 @@ function Navigation() {
 
       <div className="navigation-links">
         <h2>
-          <AnchorLink class="nav-link" href='#projects'>Projects</AnchorLink>
+          <AnchorLink className="nav-link" href='#projects'>Projects</AnchorLink>
         </h2>
         <h2>
-          <AnchorLink class="nav-link" href='#experience'>Experience</AnchorLink>
+          <AnchorLink className="nav-link" href='#experience'>Experience</AnchorLink>
         </h2>
-        <h2>  <AnchorLink class="nav-link" href='#skills'>Skills</AnchorLink></h2>
+        <h2>  <AnchorLink className="nav-link" href='#skills'>Skills</AnchorLink></h2>
       </div>
     </div>
   )

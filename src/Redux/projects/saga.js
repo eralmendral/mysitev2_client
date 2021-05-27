@@ -12,7 +12,10 @@ export function* fetchProjectsAsync() {
         snapshot.forEach(project => {
             projects = {
               ...projects,
-              [project.id]: project.data()
+              [project.id]: {
+                  id: project.id,
+                  ...project.data()
+              }
             }
         });
         

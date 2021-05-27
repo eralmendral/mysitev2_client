@@ -8,8 +8,8 @@ function DashboardLink() {
   return (
     <Link to="/login" className="dashboardLink">
     <Tooltip title="Login">
-      <IconButton color="secondary" aria-label="Login" size="large">
-        <AccountCircleIcon fontSize="medium" />
+      <IconButton color="secondary" aria-label="Login" size="medium">
+        <AccountCircleIcon size="medium" />
       </IconButton>
     </Tooltip>
     </Link>

@@ -21,9 +21,9 @@ const ProjectsComponent = ({ projects, projectIsFetching, history }) => {
 
 
     const projectsDiv = projects ?
-        <div class="project-container">
+        <div className="project-container">
             {Object.keys(projects).map((key, i) => (
-                <Card key={i} {...projects[key]} />
+                <Card className="card" key={i} {...projects[key]} />
             ))}
         </div> : <h1>No Projects</h1>
 
