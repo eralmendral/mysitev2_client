@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import Container from '@material-ui/core/Container';
-import Card from './Card';
 import { connect } from 'react-redux'
 import { selectProjectList, selectProjectLoading } from '@Redux/projects/selectors'
-
-// import { Spinner } from 'react-bootstrap'
+import SectionContainer from '@Containers/SectionContainer/SectionContainer';
+import Card from './Card';
+import './Projects.scss';
 
 const ProjectsComponent = ({ projects, projectIsFetching, history }) => {
     const showProject = (id) => {
@@ -30,9 +29,12 @@ const ProjectsComponent = ({ projects, projectIsFetching, history }) => {
 
 
     return (
-        <div className="project" id="projects">
-            <h3 className="text-center mt-5 sectionTitle">Personal Projects</h3>
-            {projectIsFetching ? <h1>Loading...</h1> : projectsDiv}
+        <div id="projects">
+            <SectionContainer title="Projects" theme="light">
+                <div className="project">
+                    {projectIsFetching ? <h1>Loading...</h1> : projectsDiv}
+                </div>
+            </SectionContainer>
         </div>
     )
 }

@@ -6,7 +6,7 @@ import { rsf , db} from '../../config/firebaseConfig';
 export function* fetchProjectsAsync() {
     try {
         const colRef = db.collection('projects');
-        const snapshot = yield call(rsf.firestore.getCollection, colRef.orderBy('date', 'asc'));
+        const snapshot = yield call(rsf.firestore.getCollection, colRef.orderBy('order', 'asc'));
         
         let projects;
         snapshot.forEach(project => {

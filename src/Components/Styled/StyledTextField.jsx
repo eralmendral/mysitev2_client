@@ -21,6 +21,9 @@ const StyledTextField = withStyles((theme) => ({
     },
     "& .MuiInputBase-input": {
       padding: "24px 10px"
+    },
+    "&  MuiOutlinedInput-input" : {
+      borderColor: theme.palette.primary.main
     }
   }
 }))(TextField);

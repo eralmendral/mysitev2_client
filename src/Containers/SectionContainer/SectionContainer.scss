@@ -1,0 +1,29 @@
+.sectionContainer {
+  min-height: 1020px;
+  width: 100vw;
+  padding: 25px 50px;
+  overflow: scroll;
+
+  .sectionTitle {
+    text-align: left;
+    font-size: 42px;
+    font-family: "Orbitron", "Montserrat";
+    font-weight: bold;
+    margin: 32px 0;
+  }
+}
+
+.sectionDark {
+  background: black;
+  .sectionTitle {
+    color: #fff;
+  }
+}
+
+.sectionLight {
+  background: rgb(230, 227, 228);
+
+  .sectionTitle {
+    color: #000;
+  }
+}

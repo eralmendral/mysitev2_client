@@ -4,9 +4,7 @@ export const MaterialThemeOverrides =
 {
   // Style sheet name ⚛️
   MuiButton: {
-    // Name of the rule
     text: {
-      // Some CSS
       background: 'linear-gradient(45deg, rgb(194, 60, 7), rgb(195, 41, 93))',
       backgroundClip: 'text',
       textFillColor: '#fff',
