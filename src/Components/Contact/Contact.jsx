@@ -88,7 +88,7 @@ class ContactComponent extends React.Component {
               <ul>
                 <li>+639 75 132 1678</li>
                 <li><a href="mailto: ealmendral@gmail.com">ealmendral@gmail.com</a></li>
-                <li><a href="https://fb.com/arquiasdf" rel="noopener noreferrer" target="_blank">fb.com/eralmendral</a></li>
+                <li><a href="https://fb.com/eralmendral" rel="noopener noreferrer" target="_blank">fb.com/eralmendral</a></li>
               </ul>
             </div>
           </div>
