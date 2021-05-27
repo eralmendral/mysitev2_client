@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 
 import { fetchProjectsStart } from '@Redux/projects/actions';
 import Home from './Containers/Home';
+import Project from '@Components/Projects/Project';
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -42,6 +43,7 @@ function App(props) {
         <ToastContainer />
         <Router>
           <Route exact path="/" component={Home} />
+          <Route path="/projects/:id" component={Project} />
           <Redirect from="*" to='/' />
         </Router>
       </div>

@@ -2,8 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-
 }
 
 .filterProjects {
@@ -12,14 +10,14 @@
   margin: -10px 0 35px 0;
 
   .filterProjectInput {
-    border:1px solid #d1c4b5;
+    border: 1px solid #d1c4b5;
     height: 32px;
     width: 260px;
     padding: 20px;
 
     &:focus {
       outline: none;
-      border:1px solid #d1c4b5;
+      border: 1px solid #d1c4b5;
     }
   }
 }
@@ -33,10 +31,10 @@
   margin-bottom: 1.5rem;
   margin-left: 1.5rem;
   padding-bottom: 10px;
-  background: #f8f2eb!important;
+  background: #f8f2eb !important;
   color: rgb(200, 59, 80) !important;
-  transition: all .3s ease-in-out;
-  cursor:pointer;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.025);
@@ -54,11 +52,54 @@
     .description {
       color: rgb(70, 15, 15);
       font-size: 12px;
-      font-family: 'Montserrat';
+      font-family: "Montserrat";
     }
   }
 
   .cardActions {
     margin: 0;
   }
+}
+
+.project-page {
+  height: 100vh;
+  padding: 25px;
+  background: rgb(31, 25, 25);
+
+  .project-images-container {
+    padding-bottom: 20px;
+  }
+
+  .project-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+
+    h1 {
+      color:rgb(200, 59, 80)
+    }
+
+    p {
+      color: #fff;
+      line-height: 32px;
+      text-justify: justify;
+    }
+
+    .project-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+      a {
+        margin: 10px;
+      }
+    }
+  }
+
+
+}
+
+.dnone {
+  display: none;
 }
