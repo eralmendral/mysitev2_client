@@ -2,6 +2,26 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+
+}
+
+.filterProjects {
+  display: flex;
+  justify-content: center;
+  margin: -10px 0 35px 0;
+
+  .filterProjectInput {
+    border:1px solid #d1c4b5;
+    height: 32px;
+    width: 260px;
+    padding: 20px;
+
+    &:focus {
+      outline: none;
+      border:1px solid #d1c4b5;
+    }
+  }
 }
 
 .card {

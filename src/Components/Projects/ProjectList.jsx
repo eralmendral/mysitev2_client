@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { selectProjectList, selectProjectLoading } from '@Redux/projects/selectors'
@@ -15,6 +15,8 @@ const ProjectsComponent = ({ projects, projectIsFetching, history }) => {
         return text.length > 50 ? text.slice(0, 50) + ' ...' : text;
     }
 
+    const [filter, setFilter] = useState("");
+
     useEffect(() => {
         console.log(projects);
     }, [])
@@ -22,15 +24,20 @@ const ProjectsComponent = ({ projects, projectIsFetching, history }) => {
 
     const projectsDiv = projects ?
         <div className="project-container">
-            {Object.keys(projects).map((key, i) => (
-                <Card className="card" key={i} {...projects[key]} />
-            ))}
+            {Object.keys(projects).filter((key, i) => {
+                return projects[key]['tags'].includes(filter);
+            }).map((key, i) => {
+                return <Card className="card" key={i} {...projects[key]} />
+            })}
         </div> : <h1>No Projects</h1>
 
 
     return (
         <div id="projects">
             <SectionContainer title="Projects" theme="light">
+                <div className="filterProjects">
+                    <input placeholder="search for tags ex.('react')" className="filterProjectInput" type="text" onChange={(e) => setFilter(e.target.value)} />
+                </div>
                 <div className="project">
                     {projectIsFetching ? <h1>Loading...</h1> : projectsDiv}
                 </div>
