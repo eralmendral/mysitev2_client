@@ -25,6 +25,14 @@ function Timeline({ experiences }) {
     return contentStyle;
   }
 
+  const arrowStyle = (key) => {
+    let arrowStyle = {  borderRight: '7px solid #735a3c' };
+    if ((key % 2) === 0) {
+      arrowStyle = {  borderRight: '7px solid #e63c69' };
+    }
+    return arrowStyle;
+  }
+
   const renderIconStyle = (type) => {
     let iconStyle = { background: '#8f7842', color: '#fff' }
 
@@ -33,6 +41,7 @@ function Timeline({ experiences }) {
     }
     return iconStyle;
   }
+  
 
   const renderExperienceTasks = (tasks) => {
     if (tasks && tasks.length > 0) {
@@ -51,6 +60,7 @@ function Timeline({ experiences }) {
           return <VerticalTimelineElement
             className="vertical-timeline-element--work timeline-card"
             contentStyle={renderContentStyle(i + 1)}
+            contentArrowStyle={arrowStyle(i+1)}
             date={`${moment(experiences[key]['date_from'].toDateString()).format('MMM-YYYY')} - ${moment(experiences[key]['date_to'].toDateString()).format('MMM-YYYY')}`}
             iconStyle={renderIconStyle(experiences[key]['type'])}
             icon={renderIcon(experiences[key]['type'])}     >
