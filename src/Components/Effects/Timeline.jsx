@@ -26,7 +26,7 @@ function Timeline({ experiences }) {
   }
 
   const renderIconStyle = (type) => {
-    let iconStyle = { background: '#543e13', color: '#fff' }
+    let iconStyle = { background: '#8f7842', color: '#fff' }
 
     if (type === "education") {
       iconStyle = { background: '#b50e3b', color: '#fff' }
@@ -64,7 +64,7 @@ function Timeline({ experiences }) {
         })}
 
         <VerticalTimelineElement
-          iconStyle={{ background: '#735a3c', color: '#fff' }}
+          iconStyle={{ background: '#8f7842', color: '#fff' }}
           icon={<StarIcon />}
         />
       </VerticalTimeline>
