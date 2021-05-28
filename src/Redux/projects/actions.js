@@ -5,7 +5,7 @@ export const fetchProjectsStart = () => ({
 });
 
 export const fetchProjectsSuccess = (projects) => ({
-    type: ProjectActionTypes.FETCH_PROJECTS_SUCCESSS,
+    type: ProjectActionTypes.FETCH_PROJECTS_SUCCESS,
     payload: projects
 });
 
