@@ -32,8 +32,6 @@ const theme = createMuiTheme({
   },
 });
 
-
-
 function App(props) {
   useEffect(() => {
     props.fetchProjects();

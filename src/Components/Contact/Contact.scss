@@ -7,12 +7,14 @@
     align-self: center;
     ul {
       li {
+        font-weight: 500;
+        font-size: 16px;
         display: inline;
         margin: 0 50px;
-        color: rgb(128, 10, 10);
+        color: rgb(224, 224, 224);
 
         a {
-          color: rgb(128, 10, 10);
+          color: rgb(224, 224, 224);
         }
       }
     }

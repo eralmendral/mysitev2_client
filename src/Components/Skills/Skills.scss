@@ -1,0 +1,46 @@
+.skills-div-container {
+  position: relative;
+  height: 720px;
+  background: red;
+
+  .skills-div {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    width: 50%;
+    height: 50%;
+    float: left;
+    box-sizing: border-box;
+
+    h3 {
+      color: #2f271d;
+    }
+  }
+
+  #div1 {
+    background: #DDD;
+  }
+  
+  #div2 {
+    background: #AAA;
+  }
+  
+  #div3 {
+    background: #777;
+  }
+  
+  #div4 {
+    background: #444;
+  }
+}
+
+.center-diamond {
+  height: 25px;
+  width: 25px;
+  background: red;
+  position: absolute;
+  top: 48.5%;
+  left: 49.3%;
+  z-index: 999;
+  transform: rotate(45deg)
+}

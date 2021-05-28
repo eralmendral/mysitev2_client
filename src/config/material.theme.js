@@ -5,7 +5,7 @@ export const MaterialThemeOverrides =
   // Style sheet name ⚛️
   MuiButton: {
     text: {
-      background: 'linear-gradient(45deg, rgb(194, 60, 7), rgb(195, 41, 93))',
+      background: '#b50e3b',
       backgroundClip: 'text',
       textFillColor: '#fff',
       textAlign: 'center',

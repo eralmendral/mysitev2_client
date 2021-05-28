@@ -128,18 +128,20 @@ class ContactComponent extends React.Component {
                   </Grid>
                 </Grid>
 
-                <Button
-                  disableElevation
-                  color="primary"
-                  type="submit"
-                  name="submit"
-                  disabled={
-                    !this.state.from_name ||
-                    !this.state.from_email ||
-                    !this.validateEmail(this.state.from_email) ||
-                    !this.state.message} >
-                  Send
+                <Box my={3}>
+                  <Button
+                    disableElevation
+                    color="primary"
+                    type="submit"
+                    name="submit"
+                    disabled={
+                      !this.state.from_name ||
+                      !this.state.from_email ||
+                      !this.validateEmail(this.state.from_email) ||
+                      !this.state.message} >
+                    Send
             </Button>
+                </Box>
               </form>
             </Container>
           </Box>

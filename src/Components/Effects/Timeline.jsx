@@ -35,7 +35,7 @@ function Timeline({ experiences }) {
   }
 
   const renderExperienceTasks = (tasks) => {
-    if (tasks.length > 0) {
+    if (tasks && tasks.length > 0) {
       return (
         tasks.map(task => (
           <p>- {task}</p>

@@ -11,18 +11,21 @@ const StyledTextField = withStyles((theme) => ({
       color: theme.palette.primary.main,
       height: 60,
       "& input": {
-        textAlign: "right"
-      }
+        textAlign: "right",
+        color: '#fff'
+      },
     },
     "& .MuiFormLabel-root": {
       paddingTop: "10px",
-      color: theme.palette.secondary.main
+      color:theme.palette.primary.main,
+     
     },
     "& .MuiInputBase-input": {
-      padding: "24px 10px"
+      padding: "24px 10px",
+      color: '#fff',
     },
-    "&  MuiOutlinedInput-input" : {
-      borderColor: theme.palette.primary.main
+    "& .MuiOutlinedInput-input" : {
+    
     }
   }
 }))(TextField);
@@ -31,7 +34,6 @@ export default function CustomTextFields(props) {
   return (
     <StyledTextField id="outlined-required"
       {...props}
-      variant="outlined" 
       />
   );
 }
