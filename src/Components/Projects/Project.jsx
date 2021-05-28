@@ -35,8 +35,8 @@ const Project = ({ project, history, match }) => {
               enableIndicators={true}
               objectFit='cover'
             >
-              {images.map((img) => (
-                <GalleryImage style={{ filter: 'saturation(2))', maxHeight: '500px' }} objectFit="contain" key={img} src={img} />
+              {images.map((img, i) => (
+                <GalleryImage key={i} style={{ filter: 'saturation(2))', maxHeight: '500px' }} objectFit="contain" key={img} src={img} />
               ))}
             </Gallery>
           </div>

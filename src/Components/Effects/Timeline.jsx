@@ -26,9 +26,9 @@ function Timeline({ experiences }) {
   }
 
   const arrowStyle = (key) => {
-    let arrowStyle = {  borderRight: '7px solid #735a3c' };
+    let arrowStyle = { borderRight: '7px solid #735a3c' };
     if ((key % 2) === 0) {
-      arrowStyle = {  borderRight: '7px solid #e63c69' };
+      arrowStyle = { borderRight: '7px solid #e63c69' };
     }
     return arrowStyle;
   }
@@ -41,13 +41,13 @@ function Timeline({ experiences }) {
     }
     return iconStyle;
   }
-  
+
 
   const renderExperienceTasks = (tasks) => {
     if (tasks && tasks.length > 0) {
       return (
-        tasks.map(task => (
-          <p>- {task}</p>
+        tasks.map((task, i) => (
+          <p key={i}>- {task}</p>
         ))
       )
     }
@@ -58,9 +58,10 @@ function Timeline({ experiences }) {
       <VerticalTimeline>
         {Object.keys(experiences).map((key, i) => {
           return <VerticalTimelineElement
+            key={i}
             className="vertical-timeline-element--work timeline-card"
             contentStyle={renderContentStyle(i + 1)}
-            contentArrowStyle={arrowStyle(i+1)}
+            contentArrowStyle={arrowStyle(i + 1)}
             date={`${moment(experiences[key]['date_from'].toDateString()).format('MMM-YYYY')} - ${moment(experiences[key]['date_to'].toDateString()).format('MMM-YYYY')}`}
             iconStyle={renderIconStyle(experiences[key]['type'])}
             icon={renderIcon(experiences[key]['type'])}     >

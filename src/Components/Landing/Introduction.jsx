@@ -18,7 +18,7 @@ export default class Introduction extends Component {
             <li>
               <a href="https://github.com/eralmendral" target="_blank" >
                 <Tooltip title="Github">
-                  <IconButton color="secondary" aria-label="Github" size="large">
+                  <IconButton color="secondary" aria-label="Github">
                     <GitHubIcon  style={{ fontSize: '34px' }}/>
                   </IconButton>
                 </Tooltip>
@@ -27,7 +27,7 @@ export default class Introduction extends Component {
             <li>
               <a href="https://www.linkedin.com/in/eric-almendral-6a13371aa/" rel="noopener noreferrer" target="_blank">
                 <Tooltip title="LinkedIn">
-                  <IconButton color="secondary" aria-label="LinkedIn" size="large">
+                  <IconButton color="secondary" aria-label="LinkedIn">
                     <LinkedInIcon style={{ fontSize: '42px' }} />
                   </IconButton>
                 </Tooltip>
@@ -36,7 +36,7 @@ export default class Introduction extends Component {
             <li>
               <a href={resume} rel="noopener noreferrer" target="_blank">
                 <Tooltip title="Resume">
-                  <IconButton size="large" color="secondary" aria-label="Resume">
+                  <IconButton color="secondary" aria-label="Resume">
                     <DescriptionIcon  style={{ fontSize: '38px' }}/>
                   </IconButton>
                 </Tooltip>

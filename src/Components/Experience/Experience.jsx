@@ -6,12 +6,6 @@ import { selectExperienceList, selectExperienceLoading } from '@Redux/experience
 
 
 const Experience = ({ experience }) => {
-  useEffect(() => {
-    {Object.keys(experience).map((key, i) => {
-     console.log('debug title:', experience[key]['title']);
-    })}
-}, [])
-
   return (
     <div id="experience">
       <SectionContainer title="Experience" theme="dark">
