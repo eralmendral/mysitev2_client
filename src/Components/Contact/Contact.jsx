@@ -140,7 +140,7 @@ class ContactComponent extends React.Component {
                       !this.validateEmail(this.state.from_email) ||
                       !this.state.message} >
                     Send
-            </Button>
+                  </Button>
                 </Box>
               </form>
             </Container>

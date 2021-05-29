@@ -8,6 +8,7 @@ import { fetchExperienceStart } from '@Redux/experience/actions';
 import { fetchSkillsStart } from '@Redux/skills/actions';
 
 import Home from './Containers/Home';
+import Login from '@Components/Login/Login';
 import Project from '@Components/Projects/Project';
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
@@ -46,6 +47,7 @@ function App(props) {
         <ToastContainer />
         <Router>
           <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
           <Route path="/projects/:id" component={Project} />
           <Redirect from="*" to='/' />
         </Router>
