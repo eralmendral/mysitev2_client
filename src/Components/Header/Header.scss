@@ -1,10 +1,8 @@
-.header {
-  display: flex;
-  height: 80px;
-  width: 100%;
-  background: rgb(195, 18, 62);
-  align-items: center;
-  justify-content: start;
-  padding: 0 5%;
+.homelink {
+  position: fixed;
+  left: 25px;
+  top: 20px;
+  z-index: 9999;
+  cursor: pointer;
   color: #fff;
 }

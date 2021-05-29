@@ -4,9 +4,11 @@ import './Header.scss';
 
 function Header() {
   return (
-    <div className='header'>
-      <Link to="/#projects">
-        <h1>Home</h1>
+    <div className="header">
+      <Link to="/">
+        <b className="text-white homelink" aria-hidden="true">
+          home
+      </b>
       </Link>
     </div>
   )
