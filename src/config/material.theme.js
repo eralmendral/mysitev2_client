@@ -1,5 +1,3 @@
-import zIndex from "@material-ui/core/styles/zIndex";
-
 export const MaterialThemeOverrides =
 {
   // Style sheet name ⚛️
