@@ -20,7 +20,6 @@ export const skillReducer = (state = initialState, action) => {
         skillsFetchError: action.payload
       }
     case SkillActionTypes.FETCH_SKILLS_SUCCESS:
-      console.log('debug success', action.payload)
       return {
         ...state,
         skillsFetching: false,

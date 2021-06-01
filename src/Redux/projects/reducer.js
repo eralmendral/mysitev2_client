@@ -20,7 +20,6 @@ export const projectReducer = (state = initialState, action) => {
         projectsFetchError: action.payload
       }
     case ProjectActionTypes.FETCH_PROJECTS_SUCCESS:
-      console.log('debug success', action.payload)
       return {
         ...state,
         projectsFetching: false,

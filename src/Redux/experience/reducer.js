@@ -20,7 +20,6 @@ export const experienceReducer = (state = initialState, action) => {
         experienceFetchError: action.payload
       }
     case ExperienceActionTypes.FETCH_EXPERIENCE_SUCCESSS:
-      console.log('debug success', action.payload)
       return {
         ...state,
         experienceFetching: false,
