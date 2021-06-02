@@ -15,11 +15,10 @@ export const selectSkillListUiux = createSelector([selectSkills], skill => filte
 
 const filterSkills = (skills, type) => {
   let skillList = [];
-   Object.keys(skills).filter((key, i) => {
-      if(skills[key]['type'] === type) {
-       skillList.push(skills[key])
-      }
-  })
-
+  for (let key of Object.keys(skills)) {
+    if (skills[key]['type'] === type) {
+      skillList.push(skills[key])
+    }
+  }
   return skillList;
 }

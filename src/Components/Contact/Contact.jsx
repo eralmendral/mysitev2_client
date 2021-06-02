@@ -8,7 +8,7 @@ import SectionContainer from '@Containers/SectionContainer/SectionContainer'
 import emailjs from "emailjs-com"
 import { toast } from "react-toastify"
 import './Contact.scss'
-
+import * as EmailValidator from 'email-validator';
 class ContactComponent extends React.Component {
   constructor(props) {
     super(props)
@@ -68,8 +68,7 @@ class ContactComponent extends React.Component {
   }
 
   validateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,:\s@"]+(\.[^<>()\[\]\\.,:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    return re.test(String(email).toLowerCase())
+    return EmailValidator.validate(email);
   }
 
   validateContent() {

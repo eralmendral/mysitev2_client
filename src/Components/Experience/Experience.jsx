@@ -1,4 +1,4 @@
-import React , { useEffect }from 'react'
+import React from 'react'
 import { connect } from 'react-redux';
 import Timeline from '@Components/Effects/Timeline';
 import SectionContainer from '@Containers/SectionContainer/SectionContainer';

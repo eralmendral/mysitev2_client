@@ -16,7 +16,7 @@ export default class Introduction extends Component {
         <div className="landingUrls">
           <ul>
             <li>
-              <a href="https://github.com/eralmendral" target="_blank" >
+              <a href="https://github.com/eralmendral" target="_blank" rel="noopener noreferrer" >
                 <Tooltip title="Github">
                   <IconButton color="secondary" aria-label="Github">
                     <GitHubIcon  style={{ fontSize: '34px' }}/>
@@ -34,7 +34,7 @@ export default class Introduction extends Component {
               </a>
             </li>
             <li>
-              <a href={resume} rel="noopener noreferrer" target="_blank">
+              <a href={resume} target="_blank" rel="noopener noreferrer">
                 <Tooltip title="Resume">
                   <IconButton color="secondary" aria-label="Resume">
                     <DescriptionIcon  style={{ fontSize: '38px' }}/>

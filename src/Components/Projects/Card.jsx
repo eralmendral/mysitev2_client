@@ -33,12 +33,7 @@ const useStyles = makeStyles((theme) => ({
 export default function RecipeReviewCard(props) {
 
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-
+ 
   const shortDescription = (text) => {
     return text.length > 50 ? text.slice(0, 35) + ' ...' : text;
   }
@@ -61,7 +56,7 @@ export default function RecipeReviewCard(props) {
       </CardContent>
 
       <div className="cardActions">
-        <a href={props.url} target="_blank" className={`${!props.url ? 'eventsNone' : ''}`} >
+        <a href={props.url} target="_blank" rel="noopener noreferrer"  className={`${!props.url ? 'eventsNone' : ''}`} >
           <Tooltip title="URL">
             <span>
               <IconButton disabled={!props.url} color="primary" aria-label="URL" size="medium">
@@ -72,7 +67,7 @@ export default function RecipeReviewCard(props) {
         </a>
 
 
-        <a href={props.github} target="_blank" className={`${!props.github ? 'eventsNone' : ''}`} >
+        <a href={props.github} target="_blank" rel="noopener noreferrer" className={`${!props.github ? 'eventsNone' : ''}`} >
           <Tooltip title="Github">
             <IconButton disabled={!props.github} color="primary" aria-label="Github" size="medium">
               <GitHubIcon style={{ fontSize: '28px' }} />

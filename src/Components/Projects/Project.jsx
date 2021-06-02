@@ -9,11 +9,11 @@ import LinkIcon from '@material-ui/icons/Link';
 import Tooltip from '@material-ui/core/Tooltip';
 import Button from '@material-ui/core/Button';
 
-const Project = ({ project, history, match }) => {
+const Project = ({ project, history }) => {
 
   if (!project) {
     history.push('/')
-  }
+}
 
   const [index, setIndex] = React.useState(0);
   const projectImages = project ? project.images ? project.images : [] : [];
@@ -36,7 +36,7 @@ const Project = ({ project, history, match }) => {
               objectFit='cover'
             >
               {images.map((img, i) => (
-                <GalleryImage key={i} style={{ filter: 'saturation(2))', maxHeight: '500px' }} objectFit="contain" key={img} src={img} />
+                <GalleryImage key={i} style={{ filter: 'saturation(2))', maxHeight: '500px' }} objectFit="contain" src={img} /> 
               ))}
             </Gallery>
           </div>
@@ -45,19 +45,19 @@ const Project = ({ project, history, match }) => {
             <h1>{project.title}</h1>
             <p>{project.description}</p>
             <div className="project-links">
-              <a href={project.url} target="_blank" className={`${!project.url ? 'eventsNone' : ''}`} >
+              <a href={project.url} target="_blank" rel="noopener noreferrer" className={`${!project.url ? 'eventsNone' : ''}`} >
                 <Tooltip title="URL">
                   <span>
-                    <Button disabled={!project.url} variant="outlined" size="small" color="primary" color="primary" aria-label="URL" size="medium">
+                    <Button disabled={!project.url} variant="outlined" color="primary" aria-label="URL" size="medium">
                       <LinkIcon style={{ fontSize: '38px' }} />
                     </Button>
                   </span>
                 </Tooltip>
               </a>
 
-              <a href={project.github} target="_blank" className={`${!project.github ? 'dnone' : ''}`} >
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className={`${!project.github ? 'dnone' : ''}`} >
                 <Tooltip title="Github">
-                  <Button variant="outlined" size="small" color="primary" aria-label="Github" size="medium">
+                  <Button variant="outlined" color="primary" aria-label="Github" size="medium">
                     <GitHubIcon style={{ fontSize: '38px' }} />
                   </Button>
                 </Tooltip>

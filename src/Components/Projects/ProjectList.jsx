@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { selectProjectList, selectProjectLoading } from '@Redux/projects/selectors'
@@ -7,14 +7,6 @@ import Card from './Card';
 import './Projects.scss';
 
 const ProjectsComponent = ({ projects, projectIsFetching, history }) => {
-    const showProject = (id) => {
-        history.push('/projects/' + id);
-    }
-
-    const shortDescription = (text) => {
-        return text.length > 50 ? text.slice(0, 50) + ' ...' : text;
-    }
-
     const [filter, setFilter] = useState("");
 
     const projectsDiv = projects ?
