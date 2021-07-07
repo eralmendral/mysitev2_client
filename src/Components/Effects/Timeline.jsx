@@ -57,12 +57,14 @@ function Timeline({ experiences }) {
     <div>
       <VerticalTimeline>
         {Object.keys(experiences).map((key, i) => {
+          const dateFrom = moment(experiences[key]['date_from'].toDateString()).format('MMM-YYYY');
+          const dateTo = experiences[key]['date_from'] === 'present' ? 'Present' : moment(experiences[key]['date_to'].toDateString()).format('MMM-YYYY');
           return <VerticalTimelineElement
             key={i}
             className="vertical-timeline-element--work timeline-card"
             contentStyle={renderContentStyle(i + 1)}
             contentArrowStyle={arrowStyle(i + 1)}
-            date={`${moment(experiences[key]['date_from'].toDateString()).format('MMM-YYYY')} - ${experiences[key]['date_to'] === 'present' ? 'Present' : moment(experiences[key]['date_to'].toDateString()).format('MMM-YYYY')}`}
+            date={`${dateFrom} - ${dateTo}`}
             iconStyle={renderIconStyle(experiences[key]['type'])}
             icon={renderIcon(experiences[key]['type'])}     >
             <h3 className="vertical-timeline-element-title">{experiences[key]['title']}</h3>
