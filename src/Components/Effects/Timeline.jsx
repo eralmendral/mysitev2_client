@@ -58,7 +58,7 @@ function Timeline({ experiences }) {
       <VerticalTimeline>
         {Object.keys(experiences).map((key, i) => {
           const dateFrom = moment(experiences[key]['date_from'].toDateString()).format('MMM-YYYY');
-          const dateTo = experiences[key]['date_from'] === 'present' ? 'Present' : moment(experiences[key]['date_to'].toDateString()).format('MMM-YYYY');
+          const dateTo = experiences[key]['date_to'] === 'Present' ? 'Present' : moment(experiences[key]['date_to'].toDateString()).format('MMM-YYYY');
           return <VerticalTimelineElement
             key={i}
             className="vertical-timeline-element--work timeline-card"

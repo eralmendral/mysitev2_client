@@ -16,7 +16,7 @@ export function* fetchExperiencesAsync() {
                   id: experience.id,
                   ...experience.data(),
                   date_from: experience.data().date_from.toDate('MM/dd/yyyy'),
-                  date_to: experience.data().date_to.toDate('MM/dd/yyyy')
+                  date_to: experience.data().date_to === 'present' ? 'Present' : experience.data().date_to.toDate('MM/dd/yyyy')
               }
             }
         });
