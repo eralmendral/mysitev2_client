@@ -62,7 +62,7 @@ function Timeline({ experiences }) {
             className="vertical-timeline-element--work timeline-card"
             contentStyle={renderContentStyle(i + 1)}
             contentArrowStyle={arrowStyle(i + 1)}
-            date={`${moment(experiences[key]['date_from'].toDateString()).format('MMM-YYYY')} - ${moment(experiences[key]['date_to'].toDateString()).format('MMM-YYYY')}`}
+            date={`${moment(experiences[key]['date_from'].toDateString()).format('MMM-YYYY')} - ${experiences[key]['date_to'] === 'present' ? 'Present' : moment(experiences[key]['date_to'].toDateString()).format('MMM-YYYY')}`}
             iconStyle={renderIconStyle(experiences[key]['type'])}
             icon={renderIcon(experiences[key]['type'])}     >
             <h3 className="vertical-timeline-element-title">{experiences[key]['title']}</h3>
